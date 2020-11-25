@@ -1,0 +1,17 @@
+{
+  "server": {
+    "agenda": {
+      "every": {
+        "0 0 * * *": ["job.daily-reset-map-number-in-brands"],
+        "1 minutes": [
+          "job.check-alive"
+        ],
+        "5 minutes": ["job.daily-amazon-data-scraping", "job.auto-update-violation-inventory"],
+        "50 minutes": ["job.daily-calculation-1st-2nd-violation"],
+        "8 hours": ["job.daily-matrix-create-top-violated-product-feeds", "job.daily-matrix-create-7-day-violation-feeds", "job.daily-dc-create-map-pricing-feeds"],
+        "60 minutes": ["job.sync-master-file-and-google-shopping-violation"],
+        "240 minutes": ["job.notify-system-status"]
+      }
+    }
+  }
+}

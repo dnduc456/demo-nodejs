@@ -1,0 +1,69 @@
+{
+  "server": {
+    "socket": {
+      "pubSubChannel": "SOCKET-IO-CHANNEL",
+      "broadcastChannel": "SOCKET-IO-BROADCAST-CHANNEL"
+    },
+    "agenda": {
+      "every": {
+        "0 0 * * *": [
+          "job.daily-reset-map-number-in-brands"
+        ],
+        "0 23 * * 7": ["job.weekly-check-inactive-reports"],
+        "1 minutes": [
+          "job.check-alive"
+        ],
+        "5 minutes": [
+          "job.daily-amazon-data-scraping",
+          "job.auto-update-violation-inventory",
+          "job.si-brand-listings-auto-run",
+          "job.si-brand-listings-auto-create"
+        ],
+        "50 minutes": [
+          "job.daily-calculation-1st-2nd-violation"
+        ],
+        "10 minutes": [
+          "job.daily-google-shopping-data-scraping"
+        ],
+        "60 minutes": [
+          "job.sync-master-file-and-google-shopping-violation"
+        ],
+        "120 minutes": [
+          "job.daily-seller-enforcement-auto-send-mail", "job.daily-seller-enforcement-auto-create-outbound-message"
+        ],
+        "240 minutes": [
+          "job.notify-system-status"
+        ],
+        "8 hours": ["job.daily-matrix-create-top-violated-product-feeds", "job.daily-create-7-day-violation-feeds", "job.daily-dc-create-map-pricing-feeds", "job.daily-seller-enforcement-auto-create-outbound-message-for-not-completed-workspace"]
+      }
+    }
+  },
+  "register": {
+    "email": {
+      "subject": "Welcome",
+      "template": "welcome"
+    }
+  },
+  "forgotPassword": {
+    "email": {
+      "subject": "Password Reset",
+      "template": "forgot-password"
+    }
+  },
+  "resetPassword": {
+    "tokenExpireInMinutes": 30,
+    "email": {
+      "subject": "Password Reset",
+      "template": "reset-password"
+    }
+  },
+  "dateTime": {
+    "DATE_FORMAT": "MM/DD/YYYY",
+    "TIME_FORMAT": "HH:mm:ss",
+    "DATE_TIME_FORMAT": "MM/DD/YYYY HH:mm:ss",
+    "DATE_FORMAT_KYC": "YYYY-MM-DD"
+  },
+  "directory": {
+    "DIR_FORMAT": "YYYY/MM/DD"
+  }
+}

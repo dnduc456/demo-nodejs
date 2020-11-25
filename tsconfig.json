@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "target": "es6",
+    "module": "commonjs",
+    "sourceMap": false,
+    "outDir": "dist",
+    "rootDir": "src",
+    "strict": true,
+    "moduleResolution": "node",
+    "baseUrl": "src",
+    "paths": {
+      "@config/*": ["config/*"],
+      "@bootstrap/*": ["bootstrap/*"],
+      "@controllers/*": ["controllers/*"],
+      "@jobs/*": ["jobs/*"],
+      "@models/*": ["models/*"],
+      "@plugins/*": ["plugins/*"],
+      "@routes/*": ["routes/*"],
+      "@serializer/*": ["serializer/*"],
+      "@services/*": ["services/*"],
+      "@utils/*": ["utils/*"],
+      "@validator/*": ["validator/*"],
+      "@interfaces/*": ["interfaces/*"],
+      "@repositories/*": ["repositories/*"],
+      "@queues/*": ["queues/*"],
+      "@handlers/*": ["handlers/*"],
+      "@enum/*": ["enum/*"],
+      "@constants/*": ["constants/*"],
+      "@migrate/*": ["migrate/*"],
+      "@calculate1st2nd/*": ["calculate1st2nd/*"],
+      "@importSdks/*": ["importSdks/*"]
+    },
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "lib": [
+      "es2015.promise",
+      "dom",
+      "es2017"
+    ]
+  },
+  "exclude": [
+    "./node_modules/**/*",
+    "./test/**/*"
+  ]
+}
