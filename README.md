@@ -1,2 +1,7 @@
-# demo-nodejs
-for demo
+yarn install
+
+yarn build
+
+yarn watch
+
+yarn test
