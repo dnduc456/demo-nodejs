@@ -2,6 +2,6 @@ yarn install
 
 yarn build
 
-yarn watch
+yarn watch -> localhost:3001/docs
 
 yarn test
